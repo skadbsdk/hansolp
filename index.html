@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>한솔제지</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.js" integrity="sha256-2AzmZuC/JWSxd9zvzxqNIBQIoB/uSRsSYtXJBhAkfjY=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css" integrity="sha256-eN7gD6kRzzeXS87cycVGlO3smXA9o+yeN0BDkTVaOc0=" crossorigin="anonymous" />
+
+  <style>
+    /* 리셋 */
+    *{margin:0;border:none;padding:0;box-sizing:border-box;}
+    .clearfix::after{content:'';display:block;clear:both;}
+    a{text-decoration:none;color:#333;}
+    ul,ol,li{list-style:none;}
+    h1,h2,h3,h4,h5,h6,p,div,span,ul,ol,li,a,label,option{font-weight:400;font-size:14px;color:#333;vertical-align:baseline;}
+    img{vertical-align:bottom;}
+
+    .wrap{width:1200px;margin:0 auto;background:white;}
+    
+    .header{border-top:2px solid #007dc6;padding:20px 0;position: relative;background:white;}
+   
+
+      /* main logo */
+    .main_logo{position:absolute;left:10px;top:30px;}
+    .main_logo_top>div{float:left;}
+    .point{margin-right:8px;}
+    .point::before,.point::after{content:'';display:block;width:8px;height:8px;}
+    .point::before{background:#007dc6;margin-bottom:8px;}
+    .point::after{background:#00a651;}
+    h1{margin-top:-14px;font-size:2.6em;font-weight:900;color:#666;}
+    .main_logo_bottom{text-align:right;}
+   
+    /* Main nav */
+    .navigation>nav>ul{float:right;}
+    nav>ul>li{float:left;}
+    nav:first-child{margin-bottom:20px;}
+    nav:first-child>ul>li::before{content:'';display:inline-block;width:1px;height:10px;margin:0 20px;background:#333;}
+    nav:first-child>ul>li:first-child::before{display:none;}
+    nav>ul>li:last-child{margin-right:10px;}
+    nav:last-child a:hover{color:#bbb;}
+    nav:last-child li{margin-left:30px;}
+    nav:last-child a{font-size:1.5em;font-weight:900;}
+
+    /* Main Banner section */
+    .main_banner{margin-bottom:30px;}
+    .swiper-slide{overflow:hidden;position:relative;height:400px;}
+    .swiper-slide img{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);}
+    .banner_txt{position:absolute;left:100px;top:50%;transform:translate(0, -54%);}
+    .banner_txt h2,.banner_txt p{color:white;}
+    .banner_txt h2{display:inline-block;margin-bottom:10px;border-bottom:2px solid white;font-weight:bolder;font-size:6em;}
+    .banner_txt p{font-size:2em;}
+    #next_btn{display:none;top:40%;}
+
+    /* quick nav section */
+    .quick_nav{margin-bottom:30px;}
+    .quick_nav div{float:left;width:15%;margin-right:1.666666666666667%;border-bottom:1px solid #00a651;padding:10px;position:relative;}
+    .quick_nav div:hover{background:#00a651;}
+    .quick_nav div::after{position:absolute;right:10px;top:50%;transform:translate(0, -50%);content:'';display:inline-block;width:16px;height:16px;background:url('images/green_btn.png') no-repeat center;background-size:cover;cursor:pointer}
+    .quick_nav div:hover::after{background-image:url('images/white_btn.png');}
+    .quick_nav div:hover a{color:white;}
+    .quick_nav div a{font-size:12px;line-height:20px;color:#008000;}    
+    
+    /* papers section */
+    .papers{margin-bottom:30px;}
+    .papers li{float:left;width:22.5%;margin-right:3.333333333333333%;}
+    .papers li:last-child{margin-right:0;}
+    .tit{margin-bottom:25px;border-bottom:1px solid #999;padding-bottom:10px;}
+    .tit h3{float:left;font-weight:bold;font-size:1.4em;}
+    .tit p{float:right;}
+    .tit p a{font-weight:bold;font-size:0.9em;}
+    .tit p a::after{content:'>';display:inline-block;margin-left:6px;}
+
+    .paper_img{margin-bottom:25px;}
+    .paper_img a:nth-child(2){display:none;}
+    .pc_img{width:100%;}
+
+    .paper_txt p{font-weight:bold;line-height:1.5em;}
+    
+    /* notice section */
+    .notice{margin-bottom:50px;}
+    .notice>ul>li{float:left;width:48.33333333333333%;}
+    .notice>ul>li:first-child{margin-right:3.333333333333333%;}
+    .notice_txt li{margin-bottom:10px;}
+    .notice_txt li:last-child{margin-bottom:0;}
+    .notice_txt div:first-child{float:left;}
+    .notice_txt div:last-child{float:right;font-size:0.9em}
+    
+    /* footer */
+    .footer .line01{height:1px;background:#00a651;}
+    .footer_logo_top>div{float:left;}
+    .point02{margin-top:6px;margin-right:6px;}
+    .point02::before,.point02::after{content:'';display:block;width:6px;height:6px;}
+    .point02::before{background:#007dc6;margin-bottom:6px;}
+    .point02::after{background:#00a651;}
+    h2{font-size:1.5em;font-weight:900;color:#666;}
+    .footer_logo{float: left;}
+    .footer_logo_bottom>p{float:right;font-size:10px;}
+    .address{padding: 7px 0 0 16px;float:left;}
+    .address>p{font-size:10px;}
+    .link_site{float:right;}
+    .link_site>p{font-size:6px;margin-left:50px;}
+    #site_name{font-size:10px;}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+        <ul class="pc_header" id="menu">
+        <li class="main_logo">
+          <ul>
+            <li class="main_logo_top clearfix">
+              <div class="point"></div>
+              <div><a href="index.html"><h1>Hansol</h1></a></div>
+            </li>
+            <li class="main_logo_bottom">
+              한솔제지
+            </li>
+          </ul>
+        </li>
+        <li class="navigation">
+          <nav class="clearfix">
+            <ul class="sub_nav clearfix">
+              <li><a href="#">홈</a></li>
+              <li><a href="#">사이트맵</a></li>
+              <li><a href="#">언어</a></li>
+              <li><a href="#">개인정보처리방침</a></li>
+            </ul>
+          </nav>
+          <nav class="clearfix">
+            <ul class="nav clearfix">
+              <li><a href="#">회사소개</a></li>
+              <li><a href="#">사업영역</a></li>
+              <li><a href="#">지속가능경영</a></li>
+              <li><a href="#">투자정보</a></li>
+              <li><a href="#">고객지원</a></li>
+            </ul>
+          </nav>
+        </li>
+      </ul>
+    </header>
+      <!-- Swiper -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/banner01.jpg" alt="banner01">
+            <div class="banner_txt">
+              <h2>VISION</h2>
+              <p>고객에게 더나은 가치를 제공하는<br>글로벌 종이재조 기업</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/banner02.jpg" alt="banner03">
+            <div class="banner_txt">
+              <h2>NATURE</h2>
+              <p>한솔제지는 더나은 가치를 제공하는<br>글로벌 종이재조 기업</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/banner03.jpg" alt="banner03">
+            <div class="banner_txt">
+              <h2>PAPER</h2>
+              <p>인쇄용지 더나은 가치를 제공하는<br>글로벌 종이재조 기업</p>
+            </div>
+          </div>
+        </div>
+       
+        <!-- If we need navigation buttons -->
+        <div id="next_btn" class="swiper-button-next"></div>
+      </div>
+    </section>
+    <section class="quick_nav clearfix">
+      <div>
+        <a href="#">한솔제지 페이퍼몰<br>바로가기</a>
+      </div>
+      <div>
+        <a href="#">한솔제지 인스퍼<br>바로가기</a>
+      </div>
+    </section>
+    <section class="papers">
+      <ul class="row clearfix">
+        <li>
+          <div class="tit clearfix">
+            <h3>인쇄용지</h3>
+            <p><a href="#">바로가기</a></p>
+          </div>
+          <div class="paper_img">
+            <a href="#"><img class="pc_img" src="images/paper01.jpg" alt="paper01"></a>
+            <a href="#"><img class="mo_img" src="images/pp01.png" alt="pp01"></a>
+          </div>
+          <div class="paper_txt">
+            <p>인쇄작업성 및 품질균일성 등 최고급 한솔 인쇄용지를 확인하실 수 있습니다.</p>
+          </div>
+        </li>
+        <li>
+          <div class="tit clearfix">
+            <h3>패키징용지</h3>
+            <p><a href="#">바로가기</a></p>
+          </div>
+          <div class="paper_img">
+            <a href="#"><img class="pc_img" src="images/paper02.jpg" alt="paper02"></a>
+            <a href="#"><img class="mo_img" src="images/pp02.png" alt="pp02"></a>
+          </div>
+          <div class="paper_txt">
+            <p>종이를 재활용한 환경친화적인 한솔 패키징용지를 확인하실 수 있습니다.</p>
+          </div>
+        </li>
+        <li>
+          <div class="tit clearfix">
+            <h3>특수지</h3>
+            <p><a href="#">바로가기</a></p>
+          </div>
+          <div class="paper_img">
+            <a href="#"><img class="pc_img" src="images/paper03.jpg" alt="paper03"></a>
+            <a href="#"><img class="mo_img" src="images/pp03.png" alt="pp03"></a>
+          </div>
+          <div class="paper_txt">
+            <p>한솔제지만의 특별한 기술 집약적 용지인 특수지를 확인하실 수 있습니다.</p>
+          </div>
+        </li>
+        <li>
+          <div class="tit clearfix">
+            <h3>감열지</h3>
+            <p><a href="#">바로가기</a></p>
+          </div>
+          <div class="paper_img">
+            <a href="#"><img class="pc_img" src="images/paper04.jpg" alt="paper04"></a>
+            <a href="#"><img class="mo_img" src="images/pp04.png" alt="pp04"></a>
+          </div>
+          <div class="paper_txt">
+            <p>발색도, 보존성 등 우수한 품질의 한솔 감열지를 확인하실 수 있습니다.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="notice">
+      <ul class="row clearfix">
+        <li>
+          <div class="tit clearfix">
+            <h3>공지사항</h3>
+            <p><a href="#">바로가기</a></p>
+          </div>
+          <ul class="notice_txt">
+            <li class="clearfix">
+              <div><a href="#">지속가능경영보고서 발간 (3nd)</a></div>
+              <div>2019-05-01</div>
+            </li>
+            <li class="clearfix">
+              <div><a href="#">회원가입 이벤트</a></div>
+              <div>2019-04-01</div>
+            </li>
+            <li class="clearfix">
+              <div><a href="#">졸업작품展, INSPER 후원 이벤트</a></div>
+              <div>2019-03-01</div>
+            </li>
+            <li class="clearfix">
+              <div><a href="#">2017년 한솔제지 상반기 대졸 신입사원 모...</a></div>
+              <div>2019-02-01</div>
+            </li>
+            <li class="clearfix">
+              <div><a href="#">지속가능경영보고서 발간 (2nd)</a></div>
+              <div>2019-01-01</div>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div class="tit clearfix">
+            <h3>뉴스</h3>
+            <p><a href="#">바로가기</a></p>
+          </div>
+          <ul class="notice_txt">
+            <li class="clearfix">
+              <div><a href="#">한솔제지, 친환경 종이 포장재 ‘프로테고 ...</a></div>
+              <div>2019-05-01</div>
+            </li>
+            <li class="clearfix">
+              <div><a href="#">["위기 넘어라" 기업이 뛴다] 한솔제지, 무...</a></div>
+              <div>2019-04-01</div>
+            </li>
+            <li class="clearfix">
+              <div><a href="#">남부발전, 대전 한솔제지 공장에 30MW 연료...</a></div>
+              <div>2019-03-01</div>
+            </li>
+            <li class="clearfix">
+              <div><a href="#">한솔제지, 신성장 동력 특수지로 재도약 '박...</a></div>
+              <div>2019-02-01/div>
+            </li>
+            <li class="clearfix">
+              <div><a href="#">한솔제지 유럽 교두보 실적 개선..."내년 흑...</a></div>
+              <div>2019-01-011</div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <footer class="footer">
+      <hr class="line01">
+      <ul class="clearfix">
+        <li class="footer_logo">
+          <ul>
+            <li class="footer_logo_top clearfix">
+              <div class="point02"></div>
+              <div><a href="index.html"><h2>Hansol</h2></a></div>
+            </li>
+            <li class="footer_logo_bottom">
+              <p>한솔제지</p>
+            </li>
+          </ul>
+        </li>
+         <li class="address">
+            <p>서울 중구 을지로 100 (을지로2가) 파인애비뉴 B동 23~24층 Tel : 02-3287-7114 , Fax : 02-6031-0908<br>
+            Copyright 2015 Hansol., All rights Reserved</p>
+         </li>
+         <li class="link_site clearfix">
+            <select name="site_name" id="site_name">
+               <option value="">패밀리사이트</option>
+               <option value="">한솔그룹</option>
+               <option value="">한솔미디어</option>
+               <option value="">한솔텔레콤</option>
+            </select>
+            <input type="button" value="GO">
+            <p>열린구매 시스템</p>
+         </li>
+      </ul>
+   </footer>
+</div>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      autoplay: {
+      delay: 3000,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+      },
+    });
+  </script> 
+</body>
+</html>
